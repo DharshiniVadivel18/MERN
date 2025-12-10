@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form class="form" id="myForm">
+  <label>Name:</label><br>
+  <input type="text" id="name" placeholder="Enter your name" required><br><br>
+
+  <label>Email:</label><br>
+  <input type="email" id="email" placeholder="Enter your email" required><br><br>
+
+  <label>Password:</label><br>
+  <input type="password" id="password" placeholder="Enter your password" required><br><br>
+
+  <label>Gender:</label><br>
+  <input type="radio" name="gender" value="Male"> Male
+  <input type="radio" name="gender" value="Female"> Female<br><br>
+
+  <button type="submit" id="submit">Submit</button>
+  <button type="reset" id="resetBtn">Reset</button>
+
+</form>
+
+<script>
+  document.getElementById("submit").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const gender = document.querySelector('input[name="gender"]:checked');
+    const genderValue = gender ? gender.value : "Not selected";
+
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Password:", password);
+    console.log("Gender:", genderValue);
+  });
+     document.getElementById("resetBtn").addEventListener("click", function () {
+    console.clear();
+    console.log("Form and console reset ");
+  });
+  
+</script>
+</body>
+</html>
