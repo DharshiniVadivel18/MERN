@@ -1,0 +1,28 @@
+*{
+    margin-top: 10px;
+}
+
+header{
+    background-color: chocolate;
+}
+
+.ol{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 10px;
+
+}
+
+.li{
+    text-decoration: none;
+    color: white;
+    padding: 4px;
+}
+
+.li:hover{
+    color: firebrick;
+    background-color: aliceblue;
+    border-radius: 10px;
+    
+}
